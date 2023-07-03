@@ -1,19 +1,12 @@
 <?php
- 
 namespace App\Models;
-
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
 use App\Models\Artist;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-
 class Song extends Model
 {
      use HasFactory;
      protected $table = 'song';   
-
 
     public function getArtist(){
         /**
@@ -22,5 +15,4 @@ class Song extends Model
          * */
         return $this->hasOne(Artist::class,'id','artist_id');
     }   
-
 }
